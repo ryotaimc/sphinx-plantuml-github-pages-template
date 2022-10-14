@@ -2,24 +2,21 @@
 
 ## About
 
-A set of template scripts to develop document with sphinx and publish it to GitHub Pages using GitHub Actions.
+A set of template scripts to develop document with [Sphinx](https://www.sphinx-doc.org/) and publish it to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions).
 
-Folder structure and config file were generated with `sphinx-quickstart` command described in <https://www.sphinx-doc.org/en/master/usage/quickstart.html>
+Folder structure and config file were generated with `sphinx-quickstart` command described in [here](https://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
 ## Getting Started
 
-### Prerequisite
+### Prerequisites
 
 - For Local Development
   - python 3.9
   - pipenv
   - Graphviz
 
-- To Update GitHub Actions
+- To Publish Page to GitHub Pages with GitHub Actions
   - A Repo with GitHub Pages enabled with GitHub Actions Trigger
-    - <https://pages.github.com/>
-    - <https://github.com/features/actions>
-
   - A GitHub credential which includes workflow scope
 
 ### Start Documentation
@@ -41,6 +38,8 @@ $ sphinx-autobuild source build/html
 
 Document push to the origin will trigger workflow described below.
 
+![flow](./README/flow.png)
+
 ```plantuml
 @startuml
 participant Local as l
@@ -49,7 +48,9 @@ participant GitHub_Actions as ga
 participant GitHub_Pages as gp
 l->g: push
 g->ga: trigger
+activate g
 ga->g: pull
+activate ga
 g-->ga: checkout
 ga->ga: build
 ga->gp: publish
