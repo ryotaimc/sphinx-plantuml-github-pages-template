@@ -52,6 +52,8 @@ $ cd docs && pipenv run sphinx-autobuild source build/html
 
 Document push to the origin will trigger workflow described below.
 
+Published document can be found at <https://ryotaimc.github.io/sphinx-plantuml-github-pages-template/>
+
 ![flow](./README/flow.png)
 
 ```plantuml
