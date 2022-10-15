@@ -27,12 +27,13 @@ Folder structure and config file were generated with `sphinx-quickstart` command
 ```txt
 sphinx-plantuml-github-pages-template
 ├ .github
-│
+│  └ workflows  # Folder for github actions definition
+│     └ github-actions-sphinx.yml
 └　docs     
-  ├ build     # Folder for build document
-  ├ source    # Folder for document source
-  ├ conf.py   # Configuration file for the Sphinx documentation builder
-  └ index.rst # Top level document contains Table Of Contents (TOC) information
+  ├ build       # Folder for build document
+  ├ source      # Folder for document source
+  ├ conf.py     # Configuration file for the Sphinx documentation builder
+  └ index.rst   # Top level document contains Table Of Contents (TOC) information
 
 ```
 
