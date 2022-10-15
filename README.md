@@ -2,7 +2,7 @@
 
 ## About
 
-A set of template scripts to develop document with [Sphinx](https://www.sphinx-doc.org/) and [PlantUML](https://plantuml.com/) to publish it to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions).
+A set of template scripts to develop document with [Sphinx](https://www.sphinx-doc.org/) and [PlantUML](https://plantuml.com/) and then publish it to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions).
 
 Folder structure and config file were generated with `sphinx-quickstart` command described in [here](https://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
