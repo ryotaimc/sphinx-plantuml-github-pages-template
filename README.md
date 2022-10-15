@@ -15,23 +15,36 @@ Folder structure and config file were generated with `sphinx-quickstart` command
   - pipenv
   - Graphviz
 
+- For UML diagram writing
+  - Recommend to use VSCode + PlantUML plugin.
+
 - To Publish Page to GitHub Pages with GitHub Actions
   - A Repo with GitHub Pages enabled with GitHub Actions Trigger
   - A GitHub credential which includes workflow scope
+
+### Folder Structure
+
+```txt
+sphinx-plantuml-github-pages-template
+├ .github
+│
+└　docs     
+  ├ build     # Folder for build document
+  ├ source    # Folder for document source
+  ├ conf.py   # Configuration file for the Sphinx documentation builder
+  └ index.rst # Top level document contains Table Of Contents (TOC) information
+
+```
 
 ### Start Documentation
 
 ```sh
 # install dependencies
-$ cd docs
-$ pipenv install
-
-# activate virtualenv
-$ pipenv shell
+$ cd docs && pipenv install
 
 # auto build and reload
 # can check latest document on http://127.0.0.1:8000 with browser
-$ sphinx-autobuild source build/html
+$ cd docs && pipenv run sphinx-autobuild source build/html
 ```
 
 ### Publish Document
