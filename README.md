@@ -11,11 +11,20 @@ Folder structure and config file were generated with `sphinx-quickstart` command
 ### Prerequisites
 
 - For Local Development
-  - python 3.9
+
+  - pyenv (python 3.9)
+    - <https://github.com/pyenv/pyenv>
+    - <https://github.com/pyenv-win/pyenv-win>
   - pipenv
-  - Graphviz
+    - <https://pipenv.pypa.io/en/latest/>
+  - PlantUML environment
+    - <https://plantuml.com/starting>
+    - Graphviz
+      - <https://graphviz.org/>
+    - Java Runtime
 
 - For UML diagram writing
+
   - Recommend to use VSCode + PlantUML plugin.
 
 - To Publish Page to GitHub Pages with GitHub Actions
@@ -29,7 +38,7 @@ sphinx-plantuml-github-pages-template
 ├ .github
 │  └ workflows  # Folder for github actions definition
 │     └ github-actions-sphinx.yml
-└　docs     
+└　docs
   ├ build       # Folder for build document
   ├ source      # Folder for document source
   ├ conf.py     # Configuration file for the Sphinx documentation builder
