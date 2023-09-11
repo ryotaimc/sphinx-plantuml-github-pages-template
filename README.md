@@ -12,20 +12,48 @@ Folder structure and config file were generated with `sphinx-quickstart` command
 
 - For Local Development
 
-  - pyenv (python 3.9)
-    - <https://github.com/pyenv/pyenv>
-    - <https://github.com/pyenv-win/pyenv-win>
+  - python 3.9.13
+
+    - via pyenv
+
+      - for Windows
+
+        - <https://github.com/pyenv-win/pyenv-win>
+
+        ```powershell
+        # with admin privilege
+        set-executionpolicy remotesigned
+
+        # with user privilege
+        Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+
+        # close powershell and and reopen
+        pyenv --version
+        pyenv install 3.9.13
+
+        # install pipenv to 3.9.13
+        cd docs && pip install pipenv
+        ```
+
+      - for linux
+        - <https://github.com/pyenv/pyenv>
+
   - pipenv
-    - <https://pipenv.pypa.io/en/latest/>
+
+    ```sh
+    cd docs && pip install pipenv
+    ```
+
   - PlantUML environment
     - <https://plantuml.com/starting>
+    - Java Runtime
     - Graphviz
       - <https://graphviz.org/>
-    - Java Runtime
 
 - For UML diagram writing
 
   - Recommend to use VSCode + PlantUML plugin.
+    - https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 
 - To Publish Page to GitHub Pages with GitHub Actions
   - A Repo with GitHub Pages enabled with GitHub Actions Trigger
